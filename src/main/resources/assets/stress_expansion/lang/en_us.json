@@ -4,7 +4,12 @@
   "block.stress_expansion.nickel_ore": "Nickel Ore",
   "block.stress_expansion.deepslate_nickel_ore": "Deepslate Nickel Ore",
   "item.stress_expansion.raw_nickel": "Raw Nickel",
+  "block.stress_expansion.raw_nickel_block": "Block of Raw Nickel",
+  "block.stress_expansion.nickel_block": "Block of Nickel",
   "item.stress_expansion.nickel_ingot": "Nickel Ingot",
   "item.stress_expansion.nickel_nugget": "Nickel Nugget",
-  "item.stress_expansion.nickel_sheet": "Nickel Sheet"
+  "item.stress_expansion.nickel_sheet": "Nickel Sheet",
+  "block.stress_expansion.laterite": "Laterite",
+  "block.stress_expansion.nickel_rich_laterite": "Nickel-Rich Laterite",
+  "item.stress_expansion.andesite_alloy_sheet": "Andesite Alloy Sheet"
 }

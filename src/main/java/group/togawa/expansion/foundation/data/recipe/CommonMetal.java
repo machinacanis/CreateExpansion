@@ -24,7 +24,9 @@ public enum CommonMetal {
 
     ZINC(CREATE),
     BRASS(false, CREATE),
+    ANDESITE_ALLOY(false, CREATE),
     NICKEL(STRESS_EXPANSION);
+
 
     private static final Map<Mods, Set<CommonMetal>> metalsOfMods = Util.make(() -> {
         Map<Mods, Set<CommonMetal>> map = new EnumMap<>(Mods.class);

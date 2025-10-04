@@ -39,6 +39,10 @@ public class TagGen {
         return b -> b.tag(BlockTags.MINEABLE_WITH_PICKAXE);
     }
 
+    public static <T extends Block, P> NonNullFunction<BlockBuilder<T, P>, BlockBuilder<T, P>> shovelOnly() {
+        return b -> b.tag(BlockTags.MINEABLE_WITH_SHOVEL);
+    }
+
     public static <T extends Block, P> NonNullFunction<BlockBuilder<T, P>, ItemBuilder<BlockItem, BlockBuilder<T, P>>> tagBlockAndItem(
             CommonMetal.ItemLikeTag tag) {
         return tagBlockAndItem(Map.of(tag.blocks(), tag.items()));

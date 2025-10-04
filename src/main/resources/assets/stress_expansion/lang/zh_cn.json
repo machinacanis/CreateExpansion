@@ -3,8 +3,13 @@
   "creativetab.stress_expansion.se_tab": "应力膨胀",
   "block.stress_expansion.nickel_ore": "镍矿石",
   "block.stress_expansion.deepslate_nickel_ore": "深层镍矿石",
-  "item.stress_expansion.raw_nickel": "生镍",
+  "item.stress_expansion.raw_nickel": "粗镍",
+  "block.stress_expansion.raw_nickel_block": "粗镍块",
+  "block.stress_expansion.nickel_block": "镍块",
   "item.stress_expansion.nickel_ingot": "镍锭",
   "item.stress_expansion.nickel_nugget": "镍粒",
-  "item.stress_expansion.nickel_sheet": "镍板"
+  "item.stress_expansion.nickel_sheet": "镍板",
+  "block.stress_expansion.laterite": "红土",
+  "block.stress_expansion.nickel_rich_laterite": "富镍红土",
+  "item.stress_expansion.andesite_alloy_sheet": "安山合金板"
 }

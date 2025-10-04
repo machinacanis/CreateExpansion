@@ -24,7 +24,8 @@ public class AllItems {
             NICKEL_NUGGET = taggedIngredient("nickel_nugget", CommonMetal.NICKEL.nuggets, Tags.Items.NUGGETS);
 
     public static final ItemEntry<Item> // 板
-            NICKEL_SHEET = taggedIngredient("nickel_sheet", CommonMetal.NICKEL.plates, PLATES.tag);
+            NICKEL_SHEET = taggedIngredient("nickel_sheet", CommonMetal.NICKEL.plates, PLATES.tag),
+            ANDESITE_ALLOY_SHEET = taggedIngredient("andesite_alloy_sheet", CommonMetal.ANDESITE_ALLOY.plates, PLATES.tag);
 
     public static void register(Logger logger) {
         logger.info("Registering items...");
