@@ -1,0 +1,10 @@
+{
+  "mod.stress_expansion.name": "Create: Stress Expansion",
+  "creativetab.stress_expansion.se_tab": "Stress Expansion",
+  "block.stress_expansion.nickel_ore": "Nickel Ore",
+  "block.stress_expansion.deepslate_nickel_ore": "Deepslate Nickel Ore",
+  "item.stress_expansion.raw_nickel": "Raw Nickel",
+  "item.stress_expansion.nickel_ingot": "Nickel Ingot",
+  "item.stress_expansion.nickel_nugget": "Nickel Nugget",
+  "item.stress_expansion.nickel_sheet": "Nickel Sheet"
+}

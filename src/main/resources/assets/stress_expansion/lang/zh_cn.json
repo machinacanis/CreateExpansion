@@ -1,0 +1,10 @@
+{
+  "mod.stress_expansion.name": "机械动力：应力膨胀",
+  "creativetab.stress_expansion.se_tab": "应力膨胀",
+  "block.stress_expansion.nickel_ore": "镍矿石",
+  "block.stress_expansion.deepslate_nickel_ore": "深层镍矿石",
+  "item.stress_expansion.raw_nickel": "生镍",
+  "item.stress_expansion.nickel_ingot": "镍锭",
+  "item.stress_expansion.nickel_nugget": "镍粒",
+  "item.stress_expansion.nickel_sheet": "镍板"
+}
