@@ -1,4 +1,4 @@
-package group.togawa.expansion.foundation.data.recipe;
+package group.togawa.stress_expansion.foundation.data.recipe;
 
 import net.createmod.catnip.lang.Lang;
 import net.minecraft.Util;
@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.*;
 
-import static group.togawa.expansion.foundation.data.recipe.Mods.*;
+import static group.togawa.stress_expansion.foundation.data.recipe.Mods.*;
 
 /**
  * 常用金属枚举类

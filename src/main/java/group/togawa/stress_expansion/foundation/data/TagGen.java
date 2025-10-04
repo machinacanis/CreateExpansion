@@ -1,11 +1,11 @@
-package group.togawa.expansion.foundation.data;
+package group.togawa.stress_expansion.foundation.data;
 
 import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.builders.ItemBuilder;
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
-import group.togawa.expansion.foundation.data.recipe.CommonMetal;
-import group.togawa.expansion.foundation.data.recipe.Mods;
+import group.togawa.stress_expansion.foundation.data.recipe.CommonMetal;
+import group.togawa.stress_expansion.foundation.data.recipe.Mods;
 import net.minecraft.core.Holder;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.data.tags.TagsProvider.TagAppender;

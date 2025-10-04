@@ -1,4 +1,4 @@
-package group.togawa.expansion;
+package group.togawa.stress_expansion;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

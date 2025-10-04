@@ -1,4 +1,4 @@
-package group.togawa.expansion;
+package group.togawa.stress_expansion;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;

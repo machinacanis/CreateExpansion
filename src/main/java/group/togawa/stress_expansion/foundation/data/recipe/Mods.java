@@ -1,7 +1,7 @@
-package group.togawa.expansion.foundation.data.recipe;
+package group.togawa.stress_expansion.foundation.data.recipe;
 
 import com.simibubi.create.Create;
-import group.togawa.expansion.StressExpansion;
+import group.togawa.stress_expansion.StressExpansion;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Consumer;

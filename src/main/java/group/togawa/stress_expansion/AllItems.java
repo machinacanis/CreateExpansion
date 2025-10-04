@@ -1,9 +1,9 @@
-package group.togawa.expansion;
+package group.togawa.stress_expansion;
 
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import group.togawa.expansion.foundation.data.recipe.CommonMetal;
+import group.togawa.stress_expansion.foundation.data.recipe.CommonMetal;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;

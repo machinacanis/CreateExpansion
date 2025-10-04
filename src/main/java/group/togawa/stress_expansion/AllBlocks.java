@@ -1,8 +1,8 @@
-package group.togawa.expansion;
+package group.togawa.stress_expansion;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import group.togawa.expansion.foundation.data.recipe.CommonMetal;
+import group.togawa.stress_expansion.foundation.data.recipe.CommonMetal;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 
 import java.util.Map;
 
-import static group.togawa.expansion.foundation.data.TagGen.*;
+import static group.togawa.stress_expansion.foundation.data.TagGen.*;
 
 public class AllBlocks {
     private static final CreateRegistrate REGISTRATE = StressExpansion.registrate(); // 获取全局注册实例
