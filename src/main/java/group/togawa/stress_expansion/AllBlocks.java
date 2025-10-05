@@ -159,7 +159,7 @@ public class AllBlocks {
             .build()
             .register();
 
-    public static final BlockEntry<BrassAnvilBlock> CHIPPED_BRASS_ANVIL = REGISTRATE.block("chipped_brass_anvil", BrassAnvilBlock::new) // 碎裂的黄铜砧
+    public static final BlockEntry<BrassAnvilBlock> CHIPPED_BRASS_ANVIL = REGISTRATE.block("chipped_brass_anvil", BrassAnvilBlock::new) // 开裂的黄铜砧
             .initialProperties(() -> Blocks.ANVIL)
             .properties(p -> p.mapColor(MapColor.METAL)
                     .requiresCorrectToolForDrops()

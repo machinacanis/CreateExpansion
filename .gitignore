@@ -27,3 +27,4 @@ repo
 /src/generated
 dev/~$物品添加&修改.xlsx
 *.afphoto~lock~
+/.vscode

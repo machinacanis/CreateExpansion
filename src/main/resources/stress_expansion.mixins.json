@@ -2,12 +2,11 @@
   "required": true,
   "package": "group.togawa.stress_expansion.mixin",
   "mixins": [
-    "FallingBlockEntityMixin"
+    "FallingBlockEntityMixin",
+    "AnvilMenuMixin"
   ],
-  "client": [
-  ],
-  "server": [
-  ],
+  "client": [],
+  "server": [],
   "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1

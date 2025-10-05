@@ -17,19 +17,18 @@ public class BrassAnvilBlock extends AnvilBlock {
 
     @Nullable
     public static BlockState damage(BlockState state) {
-        System.out.println("BrassAnvilBlock damaging called");
         if (state.is(AllBlocks.BRASS_ANVIL.get())) {
             return AllBlocks.CHIPPED_BRASS_ANVIL.get().defaultBlockState().setValue(FACING, state.getValue(FACING));
         } else if (state.is(AllBlocks.CHIPPED_BRASS_ANVIL.get())) {
             return AllBlocks.DAMAGED_BRASS_ANVIL.get().defaultBlockState().setValue(FACING, state.getValue(FACING));
         } else {
-            return null; // 已经是损坏的黄铜砧，无法再损坏
+            return null; // 已经是损坏的黄铜砧，再次损坏则损毁
         }
     }
 
+
     @Override
     protected void falling(FallingBlockEntity fallingEntity) {
-        System.out.println("BrassAnvilBlock falling called");
         fallingEntity.setHurtsEntities(FALL_DAMAGE_PER_DISTANCE, FALL_DAMAGE_MAX);
     }
 }

@@ -19,6 +19,6 @@
   "item.stress_expansion.andesite_hammer": "安山锤",
   "item.stress_expansion.brass_hammer": "黄铜锤",
   "block.stress_expansion.brass_anvil": "黄铜砧",
-  "block.stress_expansion.chipped_brass_anvil": "碎裂的黄铜砧",
+  "block.stress_expansion.chipped_brass_anvil": "开裂的黄铜砧",
   "block.stress_expansion.damaged_brass_anvil": "损坏的黄铜砧"
 }
