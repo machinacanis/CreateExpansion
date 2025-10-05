@@ -34,7 +34,9 @@ public class StressExpansion {
         AllItems.register(LOGGER); // 所有物品
         AllCreativeModeTabs.register(modEventBus, LOGGER); // 创造模式物品栏
 
-        modEventBus.addListener(StressExpansion::init);
+        AllRecipeTypes.register(modEventBus); // 配方类型
+
+        modEventBus.addListener(StressExpansion::init); // 监听一个初始化事件
     }
 
     /**

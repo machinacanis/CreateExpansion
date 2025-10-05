@@ -18,14 +18,17 @@ public class AllItems {
             RAW_NICKEL = taggedIngredient("raw_nickel", CommonMetal.NICKEL.rawOres, Tags.Items.RAW_MATERIALS);
 
     public static final ItemEntry<Item> // 锭
-            NICKEL_INGOT = taggedIngredient("nickel_ingot", CommonMetal.NICKEL.ingots, Tags.Items.INGOTS);
+            NICKEL_INGOT = taggedIngredient("nickel_ingot", CommonMetal.NICKEL.ingots, Tags.Items.INGOTS),
+            ALUMINUM_INGOT = taggedIngredient("aluminum_ingot", CommonMetal.ALUMINUM.ingots, Tags.Items.INGOTS);
 
     public static final ItemEntry<Item> // 粒
-            NICKEL_NUGGET = taggedIngredient("nickel_nugget", CommonMetal.NICKEL.nuggets, Tags.Items.NUGGETS);
+            NICKEL_NUGGET = taggedIngredient("nickel_nugget", CommonMetal.NICKEL.nuggets, Tags.Items.NUGGETS),
+            ALUMINUM_NUGGET = taggedIngredient("aluminum_nugget", CommonMetal.ALUMINUM.nuggets, Tags.Items.NUGGETS);
 
     public static final ItemEntry<Item> // 板
             NICKEL_SHEET = taggedIngredient("nickel_sheet", CommonMetal.NICKEL.plates, PLATES.tag),
-            ANDESITE_ALLOY_SHEET = taggedIngredient("andesite_alloy_sheet", CommonMetal.ANDESITE_ALLOY.plates, PLATES.tag);
+            ANDESITE_ALLOY_SHEET = taggedIngredient("andesite_alloy_sheet", CommonMetal.ANDESITE_ALLOY.plates, PLATES.tag),
+            ALUMINUM_SHEET = taggedIngredient("aluminum_sheet", CommonMetal.ALUMINUM.plates, PLATES.tag);
 
     public static void register(Logger logger) {
         logger.info("Registering items...");

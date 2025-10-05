@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "stress_expansion:block/chipped_brass_anvil",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "stress_expansion:block/chipped_brass_anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "stress_expansion:block/chipped_brass_anvil"
+    },
+    "facing=west": {
+      "model": "stress_expansion:block/chipped_brass_anvil",
+      "y": 90
+    }
+  }
+}

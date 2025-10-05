@@ -1,0 +1,6 @@
+{
+  "parent": "stress_expansion:block/template_brass_anvil",
+  "textures": {
+    "top": "stress_expansion:block/chipped_brass_anvil_top"
+  }
+}
