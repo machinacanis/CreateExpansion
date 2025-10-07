@@ -7,13 +7,14 @@ import com.google.common.base.Joiner;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.processing.recipe.ProcessingOutput;
 import com.simibubi.create.foundation.data.SimpleDatagenIngredient;
-import com.simibubi.create.foundation.data.recipe.Mods;
 import com.simibubi.create.foundation.fluid.FluidHelper;
 import com.simibubi.create.foundation.fluid.FluidIngredient;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.tterrag.registrate.util.DataIngredient;
 
 import group.togawa.stress_expansion.content.processing.recipe.ExpansedProcessingRecipe.Factory;
+import group.togawa.stress_expansion.foundation.data.ExpansedSimpleDatagenIngredient;
+import group.togawa.stress_expansion.foundation.data.recipe.Mods;
 import net.minecraft.core.NonNullList;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -119,6 +120,14 @@ public abstract class ExpansedProcessingRecipeBuilder<P extends ExpansedProcessi
         return self();
     }
 
+    /**
+     * 是否可以使用铁砧处理
+     */
+    public S canUseAnvil(boolean canUseAnvil) {
+        params.canUseAnvil = canUseAnvil;
+        return self();
+    }
+
     public R build() {
         return factory.create(params);
     }
@@ -157,7 +166,7 @@ public abstract class ExpansedProcessingRecipeBuilder<P extends ExpansedProcessi
     }
 
     public S require(Mods mod, String id) {
-        params.ingredients.add(new SimpleDatagenIngredient(mod, id).toVanilla());
+        params.ingredients.add(new ExpansedSimpleDatagenIngredient(mod, id).toVanilla());
         return self();
     }
 

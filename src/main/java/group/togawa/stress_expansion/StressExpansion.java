@@ -12,21 +12,23 @@ import org.slf4j.Logger;
 
 @Mod(StressExpansion.MOD_ID)
 public class StressExpansion {
+
     public static final String MOD_ID = "stress_expansion";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     /**
      * CreateRegistrate 实例，用于注册内容
      */
-    private static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID)
-            .defaultCreativeTab(AllCreativeModeTabs.SE_TAB.getKey()); // 注册内容的 CreateRegistrate 实例
+    private static final CreateRegistrate REGISTRATE = CreateRegistrate.create(
+        MOD_ID
+    ).defaultCreativeTab(AllCreativeModeTabs.SE_TAB.getKey()); // 注册内容的 CreateRegistrate 实例
 
     /**
      * 构造函数
      */
     public StressExpansion(IEventBus modEventBus, ModContainer modContainer) {
         LOGGER.info("Expansing the STRENGTH of Create!!!");
-        ModLoadingContext modLoadingContext = ModLoadingContext.get();
+        // ModLoadingContext modLoadingContext = ModLoadingContext.get(); // 这个暂时用不到
 
         REGISTRATE.registerEventListeners(modEventBus); // 设置 CreateRegistrate 实例的事件监听器
 

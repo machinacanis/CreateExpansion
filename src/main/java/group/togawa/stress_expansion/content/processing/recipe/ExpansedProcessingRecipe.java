@@ -48,6 +48,7 @@ public abstract class ExpansedProcessingRecipe<I extends RecipeInput, P extends 
     protected ExpansedHeatCondition requiredHeat; // 替换成应力膨胀中的热量等级
     protected ExpansedStressCondition requiredStress; // 添加应力膨胀中的应力等级
     protected double stressMultiplier; // 应力消耗倍率
+    protected boolean canUseAnvil; // 是否可以使用铁砧处理
 
     private RecipeType<?> type;
     private RecipeSerializer<?> serializer;
@@ -64,6 +65,7 @@ public abstract class ExpansedProcessingRecipe<I extends RecipeInput, P extends 
         this.requiredHeat = params.requiredHeat;
         this.requiredStress = params.requiredStress; // 添加应力膨胀中的应力等级
         this.stressMultiplier = params.stressMultiplier; // 应力消耗倍率
+        this.canUseAnvil = params.canUseAnvil; // 是否可以使用铁砧处理
         this.type = typeInfo.getType();
         this.serializer = typeInfo.getSerializer();
         this.typeInfo = typeInfo;
@@ -96,6 +98,13 @@ public abstract class ExpansedProcessingRecipe<I extends RecipeInput, P extends 
 
     protected boolean canSpecifyStressMultiplier() { // 是否可以指定应力消耗倍率
         return false;
+    }
+
+    /**
+     * 是否可以使用铁砧处理
+     */
+    public boolean canSpecifyAnvilProcessing() {
+        return canUseAnvil;
     }
 
     public List<String> validate() {
