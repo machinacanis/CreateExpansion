@@ -37,6 +37,7 @@ public class ExpansedProcessingRecipeParams {
     protected ExpansedHeatCondition requiredHeat; // 所需温度等级
     protected ExpansedStressCondition requiredStress; // 所需应力等级
     protected double stressMultiplier = 1.0; // 应力消耗倍率
+    protected boolean canUseAnvil = false; // 是否可以使用铁砧处理
 
     /**
      * 构造函数，初始化配方参数
@@ -50,6 +51,7 @@ public class ExpansedProcessingRecipeParams {
         requiredHeat = ExpansedHeatCondition.NONE; // 热量消耗等级，默认值为NONE
         requiredStress = ExpansedStressCondition.NONE; // 应力网络等级，默认值为NONE
         stressMultiplier = 1.0; // 应力消耗倍率，默认值为1.0
+        canUseAnvil = false; // 是否可以使用铁砧处理，默认值为false
     }
 
     protected static <P extends ExpansedProcessingRecipeParams> MapCodec<P> codec(Supplier<P> factory) {
@@ -65,9 +67,12 @@ public class ExpansedProcessingRecipeParams {
                 ExpansedStressCondition.CODEC.optionalFieldOf("stress_requirement", ExpansedStressCondition.NONE) // 添加应力膨胀的应力网络等级
                         .forGetter(ExpansedProcessingRecipeParams::requiredStress),
                 Codec.DOUBLE.optionalFieldOf("stress_multiplier", 1.0) // 添加应力膨胀的应力消耗倍率
-                        .forGetter(ExpansedProcessingRecipeParams::stressMultiplier))
+                        .forGetter(ExpansedProcessingRecipeParams::stressMultiplier),
+                Codec.BOOL.optionalFieldOf("can_use_anvil", false) // 添加是否可以使用铁砧处理的设定
+                        .forGetter(ExpansedProcessingRecipeParams::canUseAnvil))
                 .apply(instance,
-                        (ingredients, results, processingDuration, requiredHeat, requiredStress, stressMultiplier) -> {
+                        (ingredients, results, processingDuration, requiredHeat, requiredStress, stressMultiplier,
+                                canUseAnvil) -> {
                             P params = factory.get();
                             ingredients.forEach(either -> either
                                     .ifRight(params.ingredients::add)
@@ -79,6 +84,7 @@ public class ExpansedProcessingRecipeParams {
                             params.requiredHeat = requiredHeat;
                             params.requiredStress = requiredStress;
                             params.stressMultiplier = stressMultiplier;
+                            params.canUseAnvil = canUseAnvil; // 设置是否可以使用铁砧处理
                             return params;
                         }));
     }
@@ -148,6 +154,13 @@ public class ExpansedProcessingRecipeParams {
     }
 
     /**
+     * 是否可以使用铁砧处理
+     */
+    protected final boolean canUseAnvil() {
+        return canUseAnvil;
+    }
+
+    /**
      * 编码参数到网络缓冲区
      */
     protected void encode(RegistryFriendlyByteBuf buffer) {
@@ -159,6 +172,7 @@ public class ExpansedProcessingRecipeParams {
         ExpansedHeatCondition.STREAM_CODEC.encode(buffer, requiredHeat);
         ExpansedStressCondition.STREAM_CODEC.encode(buffer, requiredStress);
         ByteBufCodecs.DOUBLE.encode(buffer, stressMultiplier);
+        ByteBufCodecs.BOOL.encode(buffer, canUseAnvil); // 编码是否可以使用铁砧处理
     }
 
     /**
@@ -173,6 +187,7 @@ public class ExpansedProcessingRecipeParams {
         requiredHeat = ExpansedHeatCondition.STREAM_CODEC.decode(buffer);
         requiredStress = ExpansedStressCondition.STREAM_CODEC.decode(buffer);
         stressMultiplier = ByteBufCodecs.DOUBLE.decode(buffer);
+        canUseAnvil = ByteBufCodecs.BOOL.decode(buffer); // 解码是否可以使用铁砧处理
     }
 
 }

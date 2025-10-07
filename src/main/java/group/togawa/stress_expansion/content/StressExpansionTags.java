@@ -2,6 +2,7 @@ package group.togawa.stress_expansion.content;
 
 import com.simibubi.create.Create;
 import group.togawa.stress_expansion.StressExpansion;
+import javax.annotation.Nullable;
 import net.createmod.catnip.lang.Lang;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -11,9 +12,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nullable;
-
+/**
+ * 应力膨胀的标签生成
+ * 用于简化各种标签的使用和判断
+ */
 public class StressExpansionTags {
+
     public enum NameSpace {
         CREATE(Create.ID),
         COMMON("c"),
@@ -29,14 +33,18 @@ public class StressExpansionTags {
             return ResourceLocation.fromNamespaceAndPath(this.id, path);
         }
 
-        public ResourceLocation id(Enum<?> entry, @Nullable String pathOverride) {
-            return this.id(pathOverride != null ? pathOverride : Lang.asId(entry.name()));
+        public ResourceLocation id(
+            Enum<?> entry,
+            @Nullable String pathOverride
+        ) {
+            return this.id(
+                pathOverride != null ? pathOverride : Lang.asId(entry.name())
+            );
         }
     }
 
     public enum BlockTags {
-        BRASS_ANVIL,
-        ;
+        BRASS_ANVIL;
 
         public final TagKey<Block> tag;
 
@@ -49,23 +57,27 @@ public class StressExpansionTags {
         }
 
         BlockTags(NameSpace namespace, @Nullable String pathOverride) {
-            this.tag = TagKey.create(Registries.BLOCK, namespace.id(this, pathOverride));
+            this.tag = TagKey.create(
+                Registries.BLOCK,
+                namespace.id(this, pathOverride)
+            );
         }
 
         @SuppressWarnings("deprecation")
         public boolean matches(Block block) {
-            return block.builtInRegistryHolder()
-                    .is(tag);
+            return block.builtInRegistryHolder().is(tag);
         }
 
         public boolean matches(ItemStack stack) {
-            return stack != null && stack.getItem() instanceof BlockItem blockItem && matches(blockItem.getBlock());
+            return (
+                stack != null &&
+                stack.getItem() instanceof BlockItem blockItem &&
+                matches(blockItem.getBlock())
+            );
         }
 
         public boolean matches(BlockState state) {
             return state.is(tag);
         }
-
     }
-
 }
